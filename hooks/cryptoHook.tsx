@@ -45,7 +45,8 @@ const useCryptoHook = () => {
     }
 
     const changeNetwork = async () => {
-        if (process?.title == "node") return;
+        // @ts-ignore
+        if (process?.title == "node" || !window?.ethereum) return;
 
         try {
             // @ts-ignore
@@ -76,6 +77,8 @@ const useCryptoHook = () => {
 
     useEffect(() => {
         // @ts-ignore
+        if (process?.title == "node" || !window?.ethereum) return;
+        // @ts-ignore
         window?.ethereum.on("chainChanged", networkChanged);
 
         return () => {
@@ -85,6 +88,8 @@ const useCryptoHook = () => {
     }, []);
 
     useEffect(() => {
+        // @ts-ignore
+        if (process?.title == "node" || !window?.ethereum) return;
         // @ts-ignore
         window?.ethereum.on("disconnect", triggerAccountFetch);
 
