@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false, // @note: use-metamask fails when this is true :/
   swcMinify: true,
 }
 

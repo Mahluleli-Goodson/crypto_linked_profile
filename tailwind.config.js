@@ -17,6 +17,7 @@ module.exports = {
         fontFamily: {
             'nunito': ['Nunito', 'sans-serif'],
             'archivo': ['Archivo', 'sans-serif'],
+            'niconne': ['Niconne', 'cursive'],
         },
     },
     plugins: [],

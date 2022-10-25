@@ -1,12 +1,18 @@
+export enum NavMenuEnum {
+    HOME = "Home",
+    TEST = "Test",
+    CRYPTO = "Crypto",
+    DOC = "API Doc",
+}
 
 interface INavMenu {
-    title: string;
+    title: NavMenuEnum;
     link: string;
 }
 
 export const menus: INavMenu[] = [
-    {title: "Home", link: "/"},
-    {title: "Test", link: "/test"},
-    {title: "Crypto", link: "/"},
-    {title: "API Doc", link: "/"},
+    {title: NavMenuEnum.HOME, link: "/"},
+    {title: NavMenuEnum.TEST, link: "/test"},
+    {title: NavMenuEnum.CRYPTO, link: "/crypto"},
+    {title: NavMenuEnum.DOC, link: "/doc"},
 ];
